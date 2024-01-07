@@ -1,0 +1,77 @@
+.adotar {
+    background-color: white;
+    border: none;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin: 5% auto;
+    width: 80%;
+    overflow: hidden;
+}
+
+th {
+    border: none;
+    background-color: #7ba05b;
+    color: white;
+    padding: 10px;
+}
+
+td {
+    border: none;
+    padding: 8px;
+    text-align: center;
+}
+
+h1, h3 {
+    text-align: center;
+    color: #222;
+}
+
+div {
+    background-color: rgba(255, 255, 255, 0.397);
+    margin: 0 auto;
+    width: 90%;
+    border-radius: 30px;
+    margin-bottom: 5%;
+    padding: 50px;
+    margin-top: 5%;
+}
+
+.a {
+    height: 0;
+    width: 0;
+    padding: 0;
+    position: absolute;
+    top: -60px;
+    right: 200px;
+}
+
+button {
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 14px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #45a049;
+}
+
+.custom-select {
+    padding: 10px 15px;
+    font-size: 14px;
+    border: 1px solid #4CAF50;
+    border-radius: 5px;
+    background-color: #fff;
+    color: #333;
+}
+
+.custom-select:focus {
+    outline: none;
+    border-color: #45a049;
+}

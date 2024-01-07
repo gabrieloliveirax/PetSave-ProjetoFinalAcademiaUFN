@@ -1,0 +1,43 @@
+<app-header></app-header>
+<div>
+    <h1>Adoções disponíveis aqui:</h1>
+    <h3>Venha conferir todos os pets que estão procurando por um lar</h3>
+    <table class="adotar">
+        <thead>
+            <tr>
+                <th>#</th>
+                <th>Nome</th>
+                <th>Raça</th>
+                <th>Descrição</th>
+                <th>Número para contato</th>
+                <th>Adotar</th>
+                <th>Status da doação</th>
+                <th *ngIf="senhaCorreta">Admin</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let p of petss; index as i">
+                <th>{{i + 1}}</th>
+                <th>{{p.nome}}</th>
+                <th>{{p.raca}}</th>
+                <th>{{p.descricao}}</th>
+                <th>{{p.numeroParaContato}}</th>
+                <th>
+                    <button (click)="contato(p)">Entrar em contato</button>
+                </th>
+                <th>{{p.statusAdocao}}</th>
+                <th *ngIf="senhaCorreta">
+                    <select [(ngModel)]="p.statusAdocao" (change)="atualizarStatus(p.id, $event)" class="custom-select">
+                        <option value="Adotado">Adotado</option>
+                        <option value="Pendente">Pendente</option>
+                    </select>
+                </th>            
+            </tr>          
+        </tbody>
+    </table>
+</div>
+<div class="a">
+    <label>Admin:</label>
+    <input type="password" id="senhaInput" [(ngModel)]="senha" (keyup)="verificarSenha()">
+</div>
+<app-footer></app-footer>
